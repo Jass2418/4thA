@@ -21,8 +21,20 @@
 <script src="Scripts/keys.js"></script>
 <script src="Scripts/constants.js"></script>
 <script src="Scripts/main.js"></script>
-<audio autoplay controls style="display:none">
+
+<audio id="audio" src="Content/sound.mp3" type="audio/mpeg"></audio>
+<!--<audio autoplay controls style="display:none">
     <source src="Content/sound.mp3" type="audio/mpeg">
-</audio>
+</audio>-->
+<script>
+    var i = true;
+    document.addEventListener('keydown', function() {
+        if(i){
+            i = false;
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+  });
+  </script>
 </body>
 </html>
